@@ -16,3 +16,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+user node['webserver']['apppooluser'] do
+  password node['webserver']['apppoolpassword']
+  action :create
+end
+
+directory "#{node['webserver']['webroot']}/#{node['webserver']['websitename']" do
+  recursive :true
+  action :create
+end
