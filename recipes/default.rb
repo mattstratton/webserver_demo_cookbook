@@ -21,7 +21,7 @@ user node['webserver']['apppooluser'] do
   action :create
 end
 
-directory "#{node['webserver']['webroot']}/#{node['webserver']['websitename']" do
+directory "#{node['webserver']['webroot']}/#{node['webserver']['websitename']}" do
   recursive :true
   action :create
 end
